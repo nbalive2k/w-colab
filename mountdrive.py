@@ -26,6 +26,6 @@ try:
 except NameError:
     print("username variable not found, mounting at `/content/drive' using `root'")
     mountpoint = '/content/drive'
-    user = 'akuhnet'
+    user = 'nbalive'
 
 MountGDrive()
