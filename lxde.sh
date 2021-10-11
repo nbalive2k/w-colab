@@ -1,6 +1,12 @@
-wget -O ng.sh https://bit.ly/akuhnetngrok > /dev/null 2>&1
-chmod +x ng.sh
-./ng.sh
+echo "======================="
+echo "Download ngrok"
+echo "======================="
+wget -O ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
+unzip ngrok.zip > /dev/null 2>&1
+read -p "Paste Ngrok Authtoken: " CRP
+./ngrok authtoken $CRP 
+nohup ./ngrok tcp --region sa 3389 &>/dev/null &
+echo "======================="
 echo "================================"
 echo "Wait Downloading file 3-4 minutes"
 echo "More free vps visit 👉akuh.net👈"
